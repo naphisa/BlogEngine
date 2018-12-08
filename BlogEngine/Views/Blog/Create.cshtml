@@ -1,0 +1,27 @@
+﻿@model BlogEngine.Models.Blog
+
+@{
+    ViewBag.Title = "Create";
+}
+
+<h2>Create</h2>
+
+@using (Html.BeginForm("Create","Blog")) 
+{
+    <div class="form-group">
+        @Html.LabelFor(m => m.Title)
+        @Html.TextBoxFor(m => m.Title, new { @class = "form-control" })
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.Authur)
+        @Html.TextBoxFor(m => m.Authur, new { @class = "form-control" })
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.Content)
+        @Html.TextAreaFor(m => m.Content, new { @class="form-control"})
+    </div>
+    <button type="submit" class="btn btn-primary">
+        Submit
+    </button>
+}
+
